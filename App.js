@@ -32,8 +32,7 @@ const sessionOptions = {
   proxy: true,
   cookie: {
     sameSite: "none",
-    secure: true,
-    domain: "https://kanbas-node-server-app-a6-b718.onrender.com",
+    secure: true
   },
 };
 if (process.env.NODE_ENV !== "development") {
@@ -41,6 +40,7 @@ if (process.env.NODE_ENV !== "development") {
   sessionOptions.cookie = {
     sameSite: "none",
     secure: true,
+    domain: "https://kanbas-node-server-app-a6-b718.onrender.com"
   };
 }
 app.use(session(sessionOptions));
