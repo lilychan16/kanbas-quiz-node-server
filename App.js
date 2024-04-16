@@ -28,12 +28,7 @@ app.use(express.json());
 const sessionOptions = {
   secret: process.env.SESSION_SECRET,
   resave: false,
-  saveUninitialized: false,
-  proxy: true,
-  cookie: {
-    sameSite: "none",
-    secure: true
-  },
+  saveUninitialized: false
 };
 if (process.env.NODE_ENV !== "development") {
   sessionOptions.proxy = true;
