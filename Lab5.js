@@ -26,7 +26,7 @@ const Lab5 = (app) => {
     res.send("Welcome to Assignment 5");
   });
 
-  // e.g.: http://localhost:4000/a5/add/2/5
+  // e.g.: http://localhost:8000/a5/add/2/5
   app.get("/a5/add/:a/:b", (req, res) => {
     const { a, b } = req.params;
     const sum = parseInt(a) + parseInt(b);
@@ -48,7 +48,7 @@ const Lab5 = (app) => {
     res.send(sum.toString());
   });
 
-  // e.g.: http://localhost:4000/a5/calculator?a=2&b=5&operation=add
+  // e.g.: http://localhost:8000/a5/calculator?a=2&b=5&operation=add
   app.get("/a5/calculator", (req, res) => {
     const { a, b, operation } = req.query;
     let result = 0;
