@@ -61,6 +61,7 @@ const quizSchema = new mongoose.Schema(
       },
     ],
     course: { type: String, required: true },
+    published: Boolean
   },
   { collection: "quizzes" }
 );
