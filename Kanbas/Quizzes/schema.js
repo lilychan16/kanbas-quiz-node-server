@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const quizSchema = new mongoose.Schema(
   {
@@ -61,6 +61,7 @@ const quizSchema = new mongoose.Schema(
       },
     ],
     course: { type: String, required: true },
+    published: Boolean,
   },
   { collection: "quizzes" }
 );
