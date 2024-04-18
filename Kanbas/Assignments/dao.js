@@ -7,7 +7,7 @@ export const createAssignment = (assignment) => {
 
 export const findAllAssignments = () => model.find();
 
-export const findAssignmentsByCourse = (course) => model.find({ course: course });;
+export const findAssignmentsByCourse = (course) => model.find({ course: course });
 
 export const deleteAssignment = (assignmentId) => model.deleteOne({_id: assignmentId});
 
