@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "name": "kanbas-node-server-app",
+  "name": "kanbas-quiz-node-server",
   "version": "1.0.0",
   "description": "Node.js HTTP Web server for the Kanbas application",
   "main": "index.js",
@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/lilychan16/kanbas-node-server-app#readme",
   "dependencies": {
+    "axios": "^1.6.8",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",

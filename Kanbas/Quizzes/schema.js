@@ -64,6 +64,7 @@ const quizSchema = new mongoose.Schema(
     published: Boolean,
   },
   { collection: "quizzes" },
+
 );
 
 export default quizSchema;
