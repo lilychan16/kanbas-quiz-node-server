@@ -17,6 +17,7 @@ const DB_NAME = process.env.DB_NAME;
 mongoose.connect(CONNECTION_STRING, { dbName: DB_NAME });
 console.log("Connecting to MongoDB at:", CONNECTION_STRING);
 
+
 const app = express();
 app.use(
   cors({
@@ -24,7 +25,7 @@ app.use(
     credentials: true,
     // restrict cross origin resource sharing to the react application
     origin: process.env.FRONTEND_URL,
-  })
+  }),
 );
 // make sure this statement occurs AFTER setting up CORS
 app.use(express.json());
