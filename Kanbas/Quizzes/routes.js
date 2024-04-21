@@ -8,6 +8,12 @@ export default function QuizRoutes(app) {
     res.json(quizzes);
   };
 
+  const findQuizById = async (req, res) => {
+    const { aid } = req.params;
+    const quiz = await dao.findQuizById(aid);
+    res.json(quiz);
+  };
+
   const createQuiz = async (req, res) => {
     const { cid } = req.params;
     const newQuiz = {
@@ -33,6 +39,7 @@ export default function QuizRoutes(app) {
 
   app.get("/api/courses/:cid/quizzes", findQuizzesByCourse);
   app.post("/api/courses/:cid/quizzes", createQuiz);
+  app.get("/api/quizzes/:aid", findQuizById);
   app.delete("/api/quizzes/:aid", deleteQuiz);
   app.put("/api/quizzes/:aid", updateQuiz);
 }
