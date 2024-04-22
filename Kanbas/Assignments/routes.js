@@ -41,6 +41,7 @@ export default function AssignmentRoutes(app) {
     const findAssignmentsByCourse = async (req, res) => {
         const {cid} = req.params;
         const assignments = await dao.findAssignmentsByCourse(cid);
+        console.log(assignments);
         res.json(assignments);
     };
 
