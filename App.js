@@ -40,7 +40,7 @@ if (process.env.NODE_ENV !== "development") {
   sessionOptions.cookie = {
     sameSite: "none",
     secure: true,
-    domain: "https://kanbas-node-server-app-a6-b718.onrender.com",
+    domain: "https://kanbas-quiz-node-server-smbz.onrender.com",
   };
 }
 app.use(session(sessionOptions));
