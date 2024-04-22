@@ -12,6 +12,9 @@ export default function QuizRoutes(app) {
   const findQuizById = async (req, res) => {
     const { aid } = req.params;
     const quiz = await dao.findQuizById(aid);
+    if (!quiz) {
+      return res.status(404).send('Quiz not found');
+    }
     res.json(quiz);
   };
 
